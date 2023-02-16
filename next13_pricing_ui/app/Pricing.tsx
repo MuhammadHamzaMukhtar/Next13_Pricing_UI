@@ -6,20 +6,19 @@ import {
   Text,
   Flex,
   Button,
-  HStack,
+  HStack,Icon
 } from "@chakra-ui/react";
 import CheckIcon from "./icons/CheckIcon";
 
 export default function Pricing() {
   return (
     <ChakraProvider>
-      <Box w={"994px"} marginLeft="220px" marginRight={"226px"}>
-        <Flex>
+      <Box maxW={"994px"} mx={{base: "20px", md: "20px", lg: "auto"}} borderRadius="12px" overflow={"hidden"} mt={"-120px"} boxShadow="dark-lg">
+        <Flex direction={{base: "column", md: "column", lg: "row"}}>
           <Box
             textAlign={"center"}
             p="48px"
             bg={"#d0bff3"}
-            // opacity="0.1"
             color={"black"}
           >
             <Text fontWeight={"bold"}>Premium PRO</Text>
@@ -28,25 +27,25 @@ export default function Pricing() {
               Get Started
             </Button>
           </Box>
-          <Box textAlign={"center"} p="48px">
+          <Box p="48px" bg={"white"}>
             <Text>
               Access these features when you get this pricing package for your
               business.
             </Text>
             <HStack pt={"16px"}>
-              <CheckIcon />
+              <Icon as={CheckIcon} />
               <Text>International calling and messaging API</Text>
             </HStack>
             <HStack pt={"16px"}>
-              <CheckIcon />
+              <Icon as={CheckIcon} />
               <Text>Additional phone numbers</Text>
             </HStack>
             <HStack pt={"16px"}>
-              <CheckIcon />
+              <Icon as={CheckIcon} />
               <Text>Automated messages via Zapier</Text>
             </HStack>
             <HStack pt={"16px"}>
-              <CheckIcon />
+              <Icon as={CheckIcon} />
               <Text>24/7 support and consulting</Text>
             </HStack>
           </Box>
